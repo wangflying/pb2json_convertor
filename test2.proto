@@ -1,0 +1,42 @@
+// IDL for autogen_pb
+// namespace
+import "test3.proto";
+package fit.middle_pb.userinfo_query_server;
+
+// request msg
+message p_checkpwd_qryuserinfo_service_rqst {
+    optional int64 uid                  = 1;
+    optional int32 curtype              = 2;
+    optional string uin                 = 3;
+    optional string pay_passwd          = 4;
+    optional string query_attach        = 5;
+    optional string checkPwdRiskInfo    = 6;
+    optional string pwd_type            = 7;
+    optional int32 pwd_appid            = 8;
+    optional int32 res_mode             = 9;
+    optional int32 rsa_ver              = 10;    
+    optional int32 qry_db_flag          = 11;  
+}
+
+// response msg
+message p_checkpwd_qryuserinfo_service_rsp {
+    required int32 result               = 1 [default = -999];
+    required string res_info            = 2;
+    optional int64 uid                  = 3;
+    optional int64 flag                 = 4;
+    optional int32 acc_set              = 5;
+    optional string uin                 = 6;
+    optional int64 user_type            = 7;
+    optional int64 state                = 8;
+    optional string user_true_name      = 9;
+    optional string com_name            = 10;
+    optional int64 cre_type             = 11;
+    optional string cre_id              = 12;
+    optional int32 reg_type             = 13;
+    optional string reg_channel         = 14;
+    optional int32 authen_account_type  = 15;
+    optional int32 ban_static_state     = 16;
+    optional int64 authen_channel_state = 17;
+    optional int32 attid                = 18;
+    repeated tutorial.Person me = 19;
+}
